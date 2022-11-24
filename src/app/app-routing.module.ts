@@ -6,6 +6,7 @@ import { CryptoChipsListComponent } from './components/crypto-chips-list/crypto-
 import { SelectBoxComponent } from './components/select-box/select-box.component';
 import { CheckBoxComponent } from './components/check-box/check-box.component';
 import { CategoriesMenuButtonComponent } from './components/categories-menu-button/categories-menu-button.component';
+import { ProductTableComponent } from './components/product-table/product-table.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -18,6 +19,8 @@ import { CheckBoxComponentModule } from './components/check-box/check-box.compon
 import { CheckBoxListServiceModule } from './services/check-box-list.service-module';
 import { CategoriesMenuButtonComponentModule } from './components/categories-menu-button/categories-menu-button.component-module';
 import { CategoriesMenuButtonServiceModule } from './services/categories-menu-button.service-module';
+import { ProductTableComponentModule } from './components/product-table/product-table.component-module';
+import { ProductTableServiceModule } from './services/product-table.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -26,13 +29,15 @@ import { CategoriesMenuButtonServiceModule } from './services/categories-menu-bu
     { path: 'CryptoChips', component: CryptoChipsListComponent },
     { path: 'public-holidays', component: SelectBoxComponent },
     { path: 'checkbox-categories', component: CheckBoxComponent },
-    { path: 'categories-menu', component: CategoriesMenuButtonComponent }
+    { path: 'categories-menu', component: CategoriesMenuButtonComponent },
+    { path: 'product-search', component: ProductTableComponent }
   ]), ProductListComponentModule, ProductsServiceModule,
     CategoryListComponentModule, CategoryServiceModule,
     CryptoChipsListComponentModule, CryptoChipsServiceModule,
     SelectBoxComponentModule, SelectBoxServiceModule,
     CheckBoxComponentModule, CheckBoxListServiceModule,
-    CategoriesMenuButtonComponentModule, CategoriesMenuButtonServiceModule],
+    CategoriesMenuButtonComponentModule, CategoriesMenuButtonServiceModule,
+    ProductTableComponentModule, ProductTableServiceModule],
   exports: [RouterModule]
 })
 
